@@ -6,6 +6,10 @@
     background-color: rgb(225, 228, 228);
   }
 
+  .background-wht {
+    color: white;
+  }
+
 .services {
     margin: 1em;
     color: #777;
