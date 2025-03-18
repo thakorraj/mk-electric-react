@@ -101,26 +101,6 @@ const HomeComponent = () => {
 
             <div className="line">
               <div className="float-left">
-                <div className="icon-substation icon-com icon3x text-dark"></div>
-              </div>
-              <div className="margin-left-60 margin-bottom-30">
-                <h3 className="text-size-25 margin-bottom-0">Substation Construction</h3>
-                <p className="text-dark">Comprehensive design, construction, installation, and commissioning services.</p>
-              </div>
-            </div>
-
-            <div className="line">
-              <div className="float-left">
-                <div className="icon-services icon-com icon3x text-dark"></div>
-              </div>
-              <div className="margin-left-60 margin-bottom-30">
-                <h3 className="text-size-25 margin-bottom-0">Engineering Services</h3>
-                <p>Turnkey, in-house design solutions for all your electrical systems.</p>
-              </div>
-            </div>
-
-            <div className="line">
-              <div className="float-left">
                 <div className="icon-controls icon-com icon3x text-dark"></div>
               </div>
               <div className="margin-left-60 margin-bottom-30">
