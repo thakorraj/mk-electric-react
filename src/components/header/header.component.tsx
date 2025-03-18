@@ -14,6 +14,7 @@ const HeaderComponent = () => {
                                 <img className="logo-dark" src="img/logo-dark.png" alt=""> */}
                                 </a>
                             </div>
+                            <p className="nav-text"><span></span></p>
                             <div className="top-nav s-12 l-10">
                                 <ul className="right chevron">
                                     {/* <li><Link to="/"><a href="#">Home</a></Link></li>

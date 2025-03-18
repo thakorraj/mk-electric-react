@@ -1,34 +1,36 @@
-const HomeComponent = () =>{
-    return(
-        <main role="main">    
+const HomeComponent = () => {
+  return (
+    <main role="main">
       {/* Main Header */}
       <header>
-        <div className="carousel-default owl-carousel carousel-main carousel-nav-white background-dark text-center">
-          <div className="item">
+        <div className="carousel-default owl-carousel carousel-main carousel-nav-white background-dark text-center owl-loaded owl-drag">
+                        
+        <div className="owl-stage-outer"><div className="owl-stage">
+          <div className="owl-item active">
+            <div className="item">
             <div className="s-12">
               <img src="assets/img/electircal-banner.jpeg" alt="" />
               <div className="carousel-content">
                 <div className="content-center-vertical line">
                   <div className="margin-top-bottom-80">
-                    {/* Title */}
-                    {/* <h1 className="text-white margin-bottom-30 text-size-55 text-m-size-30 text-line-height-1">Reliable, Safe, and Expert Electrical Solutions – Powered by Experience!</h1> */}
+                    {/*<!-- Title -->*/}
+                    {/*<!-- <h1 className="text-white margin-bottom-30 text-size-55 text-m-size-30 text-line-height-1">Reliable, Safe, and Expert Electrical Solutions – Powered by Experience!</h1> -->*/}
                     <h1 className="text-white margin-bottom-30 text-size-50 text-m-size-30 text-line-height-1">Wired for Excellence, Powered by Experience.</h1>
-                    {/* <div className="s-12 m-10 l-8 center"><p className="text-white text-size-14 margin-bottom-40">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. Iriure dolor in hendrerit duis autem vel eum in vulputate velit esse molestie consequat.</p></div> */}
-                    {/* <div className="line">
+                    {/*<!-- <div className="s-12 m-10 l-8 center"><p className="text-white text-size-14 margin-bottom-40">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. Iriure dolor in hendrerit duis autem vel eum in vulputate velit esse molestie consequat.</p></div> -->*/}
+                    {/*<!-- <div className="line">
                       <div className="s-12 m-12 l-3 center">
                         <a className="button button-white-stroke s-12" href="/">Get Started Now</a>
                       </div>       
-                    </div>   */}
+                    </div>   -->*/}
                   </div>
                 </div>
               </div>
             </div>
-          </div>              
-        </div>               
+          </div></div></div></div><div className="owl-nav disabled"><div className="owl-prev"></div><div className="owl-next"></div></div><div className="owl-dots disabled"><div className="owl-dot active"><span></span></div></div></div>               
       </header>
-      
+
       {/* Section 1 */}
-      <section className="section-small-padding background-white text-center"> 
+      <section className="section-small-padding background-white text-center">
         <div className="line">
           <div className="margin">
             <div className="s-12 m-12 l-4 margin-m-bottom">
@@ -58,7 +60,7 @@ const HomeComponent = () =>{
           </div>
         </div>
       </section>
-      
+
       {/* Section 1 */}
       <section className="section">
         <div className="line">
@@ -66,9 +68,9 @@ const HomeComponent = () =>{
           <hr className="break-small background-primary break-center" />
         </div>
         <div className="line">
-          <div className="margin">  
+          <div className="margin">
             <div className="s-12 m-12 l-2">
-              <p className="h1 text-size-25 margin-m-bottom-30 text-primary text-line-height-1 text-right">We Are<br/> Power Industry Experts</p>
+              <p className="h1 text-size-25 margin-m-bottom-30 text-primary text-line-height-1 text-right">We Are<br /> Power Industry Experts</p>
             </div>
             <div className="s-12 m-12 l-5">
               <p className="text-size-14 margin-m-bottom-30 text-dark">MK, is a leading independent provider of comprehensive electrical services, operations, and maintenance for the industrial, utility, and renewable energy sectors across North America. We strive to become our customers' Trusted Partner in Power™.</p>
@@ -77,12 +79,12 @@ const HomeComponent = () =>{
               <p className="text-size-14 text-dark">At MK, we're dedicated to delivering top-quality services in the communities where we live and work. We believe that by working together, we can build stronger futures.</p>
             </div>
           </div>
-        </div>    
+        </div>
       </section>
-      
+
       {/* Section 2 */}
       <section className="full-width">
-        <div className="s-12 m-12 l-6">  
+        <div className="s-12 m-12 l-6">
           <img src="assets/img/img-12.jpg" alt="" />
         </div>
         <div className="s-12 m-12 l-6">
@@ -93,53 +95,53 @@ const HomeComponent = () =>{
               </div>
               <div className="margin-left-60 margin-bottom-30">
                 <h3 className="text-size-25 margin-bottom-0">Preventative Maintenance</h3>
-                <p className="text-dark">We provide predictive testing and data analysis to optimize uptime and prevent potential hazards.</p>            
+                <p className="text-dark">We provide predictive testing and data analysis to optimize uptime and prevent potential hazards.</p>
               </div>
             </div>
-            
+
             <div className="line">
               <div className="float-left">
                 <div className="icon-substation icon-com icon3x text-dark"></div>
               </div>
               <div className="margin-left-60 margin-bottom-30">
                 <h3 className="text-size-25 margin-bottom-0">Substation Construction</h3>
-                <p className="text-dark">Comprehensive design, construction, installation, and commissioning services.</p>            
+                <p className="text-dark">Comprehensive design, construction, installation, and commissioning services.</p>
               </div>
             </div>
-            
+
             <div className="line">
               <div className="float-left">
                 <div className="icon-services icon-com icon3x text-dark"></div>
               </div>
               <div className="margin-left-60 margin-bottom-30">
                 <h3 className="text-size-25 margin-bottom-0">Engineering Services</h3>
-                <p>Turnkey, in-house design solutions for all your electrical systems.</p>            
+                <p>Turnkey, in-house design solutions for all your electrical systems.</p>
               </div>
             </div>
-            
+
             <div className="line">
               <div className="float-left">
                 <div className="icon-controls icon-com icon3x text-dark"></div>
               </div>
               <div className="margin-left-60 margin-bottom-30">
                 <h3 className="text-size-25 margin-bottom-0">Controls and Automation</h3>
-                <p>Programming, maintenance, and emergency services to enhance your facility's performance.</p>            
+                <p>Programming, maintenance, and emergency services to enhance your facility's performance.</p>
               </div>
             </div>
-            
+
             <div className="line">
               <div className="float-left">
                 <i className="icon-sli-globe-alt icon3x text-dark"></i>
               </div>
               <div className="margin-left-60">
                 <h3 className="text-size-25 margin-bottom-0">And many more...</h3>
-                <p className="text-dark">We offer reliable and dedicated support for your electrical projects, equipment, and systems to optimize production across your operations.</p>            
+                <p className="text-dark">We offer reliable and dedicated support for your electrical projects, equipment, and systems to optimize production across your operations.</p>
               </div>
-            </div> 
+            </div>
           </div>
         </div>
       </section>
-      
+
       {/* Section 3 */}
       {/* <section className="section background-white" >  
         <div className="line">
@@ -181,9 +183,9 @@ const HomeComponent = () =>{
           </div>
         </div>
       </section> */}
-      
+
       <hr className="break margin-top-bottom-0" />
-      
+
       {/* Section 4 */}
       {/* <section className="section-top-padding full-width">
         <h2 className="text-size-50  text-m-size-40 text-center">Our Work</h2>
@@ -470,8 +472,8 @@ const HomeComponent = () =>{
             </div>
          </div>
       </section> */}
-      
-      {/* Section 5 */}    
+
+      {/* Section 5 */}
       <section className="section background-white text-center">
         <div className="line">
           <h2 className="text-size-50  text-m-size-40 text-center">Testimonials</h2>
@@ -484,7 +486,7 @@ const HomeComponent = () =>{
                 <p className="h1 text-size-16">Scott Star / CEO / Company</p>
               </div>
             </div>
-            <div className="item"> 
+            <div className="item">
               <div className="s-12 m-12 l-7 center text-center">
                 <img className="image-testimonial-small" src="assets/img/testimonials-05.png" alt="" />
                 <p className="h1 margin-bottom text-size-20">I couldn’t be happier with the service! He was professional, thorough, and made sure to answer all of my questions. He even gave me tips on maintaining my electrical system. A truly top-notch experience!</p>
@@ -502,7 +504,7 @@ const HomeComponent = () =>{
         </div>
       </section>
     </main>
-    )
+  )
 }
 
-export {HomeComponent}
+export { HomeComponent }

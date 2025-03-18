@@ -10,3 +10,11 @@
     margin: 1em;
     color: #777;
 }
+
+.owl-item{
+    width: 100%;
+}
+
+.owl-stage-outer{
+    width: 100%;
+}
