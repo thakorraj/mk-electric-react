@@ -1,4 +1,19 @@
+import React, { useState } from "react";
+// import "./TestimonialSlider.css";
+
+const testimonials = [
+    { img: "assets/img/testimonials-06.png", name: "Jane Naismith", text: "From the moment he arrived, he was professional and respectful. He explained the issue, provided a clear solution, and got the job done efficiently. I felt confident in his work, and I know who to call for any future electrical needs!" },
+    { img: "assets/img/testimonials-05.png", name: "Mark Stoner", text: "I couldn’t be happier with the service! He was professional, thorough, and made sure to answer all of my questions. He even gave me tips on maintaining my electrical system. A truly top-notch experience!" },
+    { img: "assets/img/testimonials-04.png", name: "Scott Star", text: "Excellent work! He not only resolved our electrical issue but also performed a thorough safety check to ensure everything was in top shape. Friendly, honest, and reliable—exactly what you want in an electrician!" }
+];
+
 const HomeComponent = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+    const moveSlide = (index:any) => {
+        setCurrentIndex(index);
+    };
+
   return (
     <main role="main">
       {/* Main Header */}
@@ -458,29 +473,74 @@ const HomeComponent = () => {
         <div className="line">
           <h2 className="text-size-50  text-m-size-40 text-center">Testimonials</h2>
           <hr className="break-small background-primary break-center" />
-          <div className="carousel-default owl-carousel carousel-wide-arrows">
-            <div className="item">
-              <div className="s-12 m-12 l-7 center text-center">
-                <img className="image-testimonial-small" src="assets/img/testimonials-04.png" alt="" />
-                <p className="h1 margin-bottom text-size-20">Excellent work! He not only resolved our electrical issue but also performed a thorough safety check to ensure everything was in top shape. Friendly, honest, and reliable—exactly what you want in an electrician!</p>
-                <p className="h1 text-size-16">Scott Star / CEO / Company</p>
-              </div>
+          <div className="slider-container">
+            <div className="slides" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+                {testimonials.map((testimonial, index) => (
+                    <div className="slide" key={index}>
+                        <img className="photo" src={testimonial.img} alt={`Person ${index + 1}`} />
+                        <p className="h1 margin-bottom text-size-20">{testimonial.text}</p>
+                        <br/>
+                        <p className="h1 text-size-16">{testimonial.name}</p>
+                    </div>
+                ))}
             </div>
-            <div className="item">
+            <div className="nav">
+                {testimonials.map((_, index) => (
+                    <span 
+                        key={index} 
+                        className={`dot ${currentIndex === index ? "active" : ""}`} 
+                        onClick={() => moveSlide(index)}
+                    ></span>
+                ))}
+            </div>
+        </div>
+          {/* <div className="carousel-default owl-carousel carousel-wide-arrows owl-loaded owl-drag">
+            
+            
+            
+          <div className="owl-stage-outer"><div className="owl-stage"><div className="owl-item cloned" ><div className="item"> 
               <div className="s-12 m-12 l-7 center text-center">
-                <img className="image-testimonial-small" src="assets/img/testimonials-05.png" alt="" />
+                <img className="image-testimonial-small" src="assets/img/testimonials-05.png" alt=""/>
                 <p className="h1 margin-bottom text-size-20">I couldn’t be happier with the service! He was professional, thorough, and made sure to answer all of my questions. He even gave me tips on maintaining my electrical system. A truly top-notch experience!</p>
-                <p className="h1 text-size-16">Mark Stoner / Web Developer / Company</p>
-              </div>
-            </div>
-            <div className="item">
+                <p className="h1 text-size-16">Mark Stoner / Web Developer / Company
+              </p></div>
+            </div></div><div className="owl-item cloned"><div className="item">
               <div className="s-12 m-12 l-7 center text-center">
-                <img className="image-testimonial-small" src="assets/img/testimonials-06.png" alt="" />
+                <img className="image-testimonial-small" src="assets/img/testimonials-06.png" alt=""/>
                 <p className="h1 margin-bottom text-size-20">From the moment he arrived, he was professional and respectful. He explained the issue, provided a clear solution, and got the job done efficiently. I felt confident in his work, and I know who to call for any future electrical needs!</p>
                 <p className="h1 text-size-16">Jane Naismith / Web Designer / Company</p>
               </div>
-            </div>
-          </div>
+            </div></div><div className="owl-item"><div className="item">
+              <div className="s-12 m-12 l-7 center text-center">
+                <img className="image-testimonial-small" src="assets/img/testimonials-04.png" alt=""/>
+                <p className="h1 margin-bottom text-size-20">Excellent work! He not only resolved our electrical issue but also performed a thorough safety check to ensure everything was in top shape. Friendly, honest, and reliable—exactly what you want in an electrician!</p>
+                <p className="h1 text-size-16">Scott Star / CEO / Company</p>
+              </div>
+            </div></div><div className="owl-item"><div className="item"> 
+              <div className="s-12 m-12 l-7 center text-center">
+                <img className="image-testimonial-small" src="assets/img/testimonials-05.png" alt=""/>
+                <p className="h1 margin-bottom text-size-20">I couldn’t be happier with the service! He was professional, thorough, and made sure to answer all of my questions. He even gave me tips on maintaining my electrical system. A truly top-notch experience!</p>
+                <p className="h1 text-size-16">Mark Stoner / Web Developer / Company
+              </p></div>
+            </div></div><div className="owl-item active"><div className="item">
+              <div className="s-12 m-12 l-7 center text-center">
+                <img className="image-testimonial-small" src="assets/img/testimonials-06.png" alt=""/>
+                <p className="h1 margin-bottom text-size-20">From the moment he arrived, he was professional and respectful. He explained the issue, provided a clear solution, and got the job done efficiently. I felt confident in his work, and I know who to call for any future electrical needs!</p>
+                <p className="h1 text-size-16">Jane Naismith / Web Designer / Company</p>
+              </div>
+            </div></div><div className="owl-item cloned"><div className="item">
+              <div className="s-12 m-12 l-7 center text-center">
+                <img className="image-testimonial-small" src="assets/img/testimonials-04.png" alt=""/>
+                <p className="h1 margin-bottom text-size-20">Excellent work! He not only resolved our electrical issue but also performed a thorough safety check to ensure everything was in top shape. Friendly, honest, and reliable—exactly what you want in an electrician!</p>
+                <p className="h1 text-size-16">Scott Star / CEO / Company</p>
+              </div>
+            </div></div><div className="owl-item cloned"><div className="item"> 
+              <div className="s-12 m-12 l-7 center text-center">
+                <img className="image-testimonial-small" src="assets/img/testimonials-05.png" alt=""/>
+                <p className="h1 margin-bottom text-size-20">I couldn’t be happier with the service! He was professional, thorough, and made sure to answer all of my questions. He even gave me tips on maintaining my electrical system. A truly top-notch experience!</p>
+                <p className="h1 text-size-16">Mark Stoner / Web Developer / Company
+              </p></div>
+            </div></div></div></div><div className="owl-nav"><div className="owl-prev"></div><div className="owl-next"></div></div><div className="owl-dots"><div className="owl-dot"><span></span></div><div className="owl-dot"><span></span></div><div className="owl-dot active"><span></span></div></div></div> */}
         </div>
       </section>
     </main>
