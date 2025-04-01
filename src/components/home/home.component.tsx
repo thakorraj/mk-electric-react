@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import "./TestimonialSlider.css";
 
 const testimonials = [
@@ -9,6 +9,13 @@ const testimonials = [
 
 const HomeComponent = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 2000);
+    return () => clearInterval(interval);
+}, []);
 
     const moveSlide = (index:any) => {
         setCurrentIndex(index);
